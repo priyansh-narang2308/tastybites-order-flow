@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// TastyBites custom colors
+				tasty: {
+					orange: '#FF6B35',
+					'orange-light': '#FF8A5B',
+					'orange-dark': '#E55A2B',
+					charcoal: '#2C3E50',
+					'charcoal-light': '#34495E',
+					cream: '#FFF8F5',
+					gold: '#F39C12'
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,49 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
+				},
+				'bounce-gentle': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-2px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'scale-in': 'scale-in 0.2s ease-out',
+				'bounce-gentle': 'bounce-gentle 0.5s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'glass-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
+				'hero-gradient': 'linear-gradient(135deg, #FF6B35, #FF8A5B)'
+			},
+			backdropBlur: {
+				'glass': '16px'
 			}
 		}
 	},
